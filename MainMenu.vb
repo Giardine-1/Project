@@ -11,6 +11,7 @@ Public Class MainMenu
         Label4.Text = username
         Dim connection As New MySqlConnection("datasource=localhost;port=3306;user=root;password=;database=admin")
         Dim reader As MySqlDataReader
+
         'getting faculty sections
         Dim com As New MySqlCommand("SELECT * FROM `faculty` WHERE `username`='" & Label4.Text & "'", connection)
 
@@ -61,6 +62,8 @@ Public Class MainMenu
     Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
         BunifuGradientPanel2.Width = 199
         BunifuGradientPanel3.Visible = False
+        StartBox.Height = 0
+        ADDSTU.Width = 0
     End Sub
 
     Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
@@ -76,6 +79,44 @@ Public Class MainMenu
         BunifuGradientPanel2.Width = 0
         BunifuGradientPanel3.Visible = True
         Label10.Text = Label3.Text
+
+    End Sub
+
+    Private Sub StartAttendance_Click(sender As Object, e As EventArgs) Handles StartAttendance.Click
+
+        StartBox.Height = 199
+        ADDSTU.Width = 0
+    End Sub
+
+    Private Sub ScanWeb_Click(sender As Object, e As EventArgs) Handles ScanWeb.Click
+        Me.Hide()
+
+    End Sub
+
+    Private Sub ScanPC_Click(sender As Object, e As EventArgs) Handles ScanPC.Click
+        Me.Hide()
+
+    End Sub
+
+    Private Sub AddStudent_Click(sender As Object, e As EventArgs) Handles AddStudent.Click
+
+        StartBox.Height = 0
+        ADDSTU.Width = 254
+    End Sub
+
+
+    'add student
+    Private Sub BunifuFlatButton1_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton1.Click
+        Timer1.Start()
+        If Not ADDSTU.Height = 121 Then
+            ADDSTU.Height = 
+            Timer1.Enabled = False
+        End If
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        ADDSTU.Height = 209
+        Timer1.Stop()
 
     End Sub
 End Class
