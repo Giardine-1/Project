@@ -1,0 +1,20 @@
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\QR Attendance.exe.config
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\QR Attendance.exe
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\QR Attendance.pdb
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\QR Attendance.xml
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\Bunifu_UI_v1.52.dll
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR Attendance.vbprojAssemblyReference.cache
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.Form1.resources
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.Resources.resources
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR Attendance.vbproj.GenerateResource.cache
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR Attendance.vbproj.CoreCompileInputs.cache
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR Attendance.vbproj.CopyComplete
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR Attendance.exe
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR Attendance.xml
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR Attendance.pdb
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\MySql.Data.dll
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\Google.Protobuf.dll
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\Renci.SshNet.dll
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\MySql.Data.xml
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.MainMenu.resources
