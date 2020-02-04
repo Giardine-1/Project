@@ -18,3 +18,7 @@ C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\Bou
 C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\Renci.SshNet.dll
 C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\MySql.Data.xml
 C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.MainMenu.resources
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.CreateQRvb.resources
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\MessagingToolkit.QRCode.dll
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.WebcamScan.resources
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.ScanAttPC.resources

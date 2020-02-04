@@ -51,7 +51,7 @@ Public Class Form1
         'getting Name
         connection.Open()
         reader = command.ExecuteReader
-        Dim count As Integer
+        Dim count As Byte
         count = 0
         While reader.Read
             count = count + 1
