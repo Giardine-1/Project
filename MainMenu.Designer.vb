@@ -25,6 +25,10 @@ Partial Class MainMenu
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainMenu))
         Me.BunifuGradientPanel2 = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -65,10 +69,15 @@ Partial Class MainMenu
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.BunifuCustomTextbox1 = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
-        Me.BunifuFlatButton6 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton5 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.BunifuGradientPanel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -87,6 +96,10 @@ Partial Class MainMenu
         '
         Me.BunifuGradientPanel2.BackgroundImage = CType(resources.GetObject("BunifuGradientPanel2.BackgroundImage"), System.Drawing.Image)
         Me.BunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuGradientPanel2.Controls.Add(Me.Label28)
+        Me.BunifuGradientPanel2.Controls.Add(Me.Label27)
+        Me.BunifuGradientPanel2.Controls.Add(Me.Label26)
+        Me.BunifuGradientPanel2.Controls.Add(Me.Label20)
         Me.BunifuGradientPanel2.Controls.Add(Me.Label18)
         Me.BunifuGradientPanel2.Controls.Add(Me.Label15)
         Me.BunifuGradientPanel2.Controls.Add(Me.Label11)
@@ -109,6 +122,58 @@ Partial Class MainMenu
         Me.BunifuGradientPanel2.Quality = 10
         Me.BunifuGradientPanel2.Size = New System.Drawing.Size(0, 400)
         Me.BunifuGradientPanel2.TabIndex = 5
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.BackColor = System.Drawing.Color.Transparent
+        Me.Label28.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label28.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.ForeColor = System.Drawing.Color.Black
+        Me.Label28.Location = New System.Drawing.Point(7, 307)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(149, 20)
+        Me.Label28.TabIndex = 18
+        Me.Label28.Text = "No Other Section"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.BackColor = System.Drawing.Color.Transparent
+        Me.Label27.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label27.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.ForeColor = System.Drawing.Color.Black
+        Me.Label27.Location = New System.Drawing.Point(7, 288)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(149, 20)
+        Me.Label27.TabIndex = 17
+        Me.Label27.Text = "No Other Section"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.BackColor = System.Drawing.Color.Transparent
+        Me.Label26.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label26.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.Black
+        Me.Label26.Location = New System.Drawing.Point(7, 268)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(149, 20)
+        Me.Label26.TabIndex = 16
+        Me.Label26.Text = "No Other Section"
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.BackColor = System.Drawing.Color.Transparent
+        Me.Label20.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label20.Font = New System.Drawing.Font("MS Reference Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.ForeColor = System.Drawing.Color.Maroon
+        Me.Label20.Location = New System.Drawing.Point(59, 353)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(88, 16)
+        Me.Label20.TabIndex = 15
+        Me.Label20.Text = "Add Section"
         '
         'Label18
         '
@@ -145,7 +210,7 @@ Partial Class MainMenu
         Me.Label11.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label11.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.Black
-        Me.Label11.Location = New System.Drawing.Point(8, 289)
+        Me.Label11.Location = New System.Drawing.Point(7, 248)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(149, 20)
         Me.Label11.TabIndex = 12
@@ -158,7 +223,7 @@ Partial Class MainMenu
         Me.Label8.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label8.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
-        Me.Label8.Location = New System.Drawing.Point(8, 266)
+        Me.Label8.Location = New System.Drawing.Point(7, 226)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(149, 20)
         Me.Label8.TabIndex = 11
@@ -171,7 +236,7 @@ Partial Class MainMenu
         Me.Label6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label6.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(8, 242)
+        Me.Label6.Location = New System.Drawing.Point(7, 204)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(149, 20)
         Me.Label6.TabIndex = 10
@@ -193,11 +258,11 @@ Partial Class MainMenu
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.Maroon
-        Me.Label5.Location = New System.Drawing.Point(60, 195)
+        Me.Label5.Location = New System.Drawing.Point(59, 165)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(78, 20)
+        Me.Label5.Size = New System.Drawing.Size(68, 18)
         Me.Label5.TabIndex = 9
         Me.Label5.Text = "Sections"
         '
@@ -220,11 +285,11 @@ Partial Class MainMenu
         Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label3.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(8, 217)
+        Me.Label3.Location = New System.Drawing.Point(7, 182)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(183, 20)
+        Me.Label3.Size = New System.Drawing.Size(96, 20)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "COEN 1013 Section 5"
+        Me.Label3.Text = "No section"
         '
         'Label2
         '
@@ -245,7 +310,7 @@ Partial Class MainMenu
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("MS Reference Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(5, 160)
+        Me.Label1.Location = New System.Drawing.Point(5, 137)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(73, 24)
         Me.Label1.TabIndex = 1
@@ -255,7 +320,7 @@ Partial Class MainMenu
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(-86, 1)
+        Me.PictureBox1.Location = New System.Drawing.Point(-86, -9)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(371, 146)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -718,7 +783,6 @@ Partial Class MainMenu
         Me.Panel1.Controls.Add(Me.Label13)
         Me.Panel1.Controls.Add(Me.Label12)
         Me.Panel1.Controls.Add(Me.BunifuCustomTextbox1)
-        Me.Panel1.Controls.Add(Me.BunifuFlatButton6)
         Me.Panel1.Controls.Add(Me.BunifuFlatButton5)
         Me.Panel1.Controls.Add(Me.DataGridView1)
         Me.Panel1.Location = New System.Drawing.Point(117, 54)
@@ -797,51 +861,17 @@ Partial Class MainMenu
         Me.Label12.ForeColor = System.Drawing.Color.White
         Me.Label12.Location = New System.Drawing.Point(1, 7)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(106, 18)
+        Me.Label12.Size = New System.Drawing.Size(184, 18)
         Me.Label12.TabIndex = 14
-        Me.Label12.Text = "Search Name:"
+        Me.Label12.Text = "Search Student Number:"
         '
         'BunifuCustomTextbox1
         '
         Me.BunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen
-        Me.BunifuCustomTextbox1.Location = New System.Drawing.Point(107, 5)
+        Me.BunifuCustomTextbox1.Location = New System.Drawing.Point(187, 5)
         Me.BunifuCustomTextbox1.Name = "BunifuCustomTextbox1"
         Me.BunifuCustomTextbox1.Size = New System.Drawing.Size(214, 20)
         Me.BunifuCustomTextbox1.TabIndex = 20
-        '
-        'BunifuFlatButton6
-        '
-        Me.BunifuFlatButton6.Activecolor = System.Drawing.Color.DimGray
-        Me.BunifuFlatButton6.BackColor = System.Drawing.Color.Black
-        Me.BunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BunifuFlatButton6.BorderRadius = 0
-        Me.BunifuFlatButton6.ButtonText = "Update Info"
-        Me.BunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.BunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray
-        Me.BunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent
-        Me.BunifuFlatButton6.Iconimage = Nothing
-        Me.BunifuFlatButton6.Iconimage_right = Nothing
-        Me.BunifuFlatButton6.Iconimage_right_Selected = Nothing
-        Me.BunifuFlatButton6.Iconimage_Selected = Nothing
-        Me.BunifuFlatButton6.IconMarginLeft = 0
-        Me.BunifuFlatButton6.IconMarginRight = 0
-        Me.BunifuFlatButton6.IconRightVisible = True
-        Me.BunifuFlatButton6.IconRightZoom = 0R
-        Me.BunifuFlatButton6.IconVisible = True
-        Me.BunifuFlatButton6.IconZoom = 90.0R
-        Me.BunifuFlatButton6.IsTab = False
-        Me.BunifuFlatButton6.Location = New System.Drawing.Point(156, 318)
-        Me.BunifuFlatButton6.Name = "BunifuFlatButton6"
-        Me.BunifuFlatButton6.Normalcolor = System.Drawing.Color.Black
-        Me.BunifuFlatButton6.OnHovercolor = System.Drawing.Color.DimGray
-        Me.BunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White
-        Me.BunifuFlatButton6.selected = False
-        Me.BunifuFlatButton6.Size = New System.Drawing.Size(128, 39)
-        Me.BunifuFlatButton6.TabIndex = 19
-        Me.BunifuFlatButton6.Text = "Update Info"
-        Me.BunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.BunifuFlatButton6.Textcolor = System.Drawing.Color.White
-        Me.BunifuFlatButton6.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'BunifuFlatButton5
         '
@@ -897,12 +927,72 @@ Partial Class MainMenu
         Me.PictureBox4.TabIndex = 7
         Me.PictureBox4.TabStop = False
         '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.ForeColor = System.Drawing.Color.White
+        Me.Label21.Location = New System.Drawing.Point(568, 33)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(61, 13)
+        Me.Label21.TabIndex = 15
+        Me.Label21.Text = "01-01-2020"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.ForeColor = System.Drawing.Color.White
+        Me.Label22.Location = New System.Drawing.Point(513, 33)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(49, 13)
+        Me.Label22.TabIndex = 16
+        Me.Label22.Text = "Saturday"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.ForeColor = System.Drawing.Color.White
+        Me.Label23.Location = New System.Drawing.Point(559, 33)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(10, 13)
+        Me.Label23.TabIndex = 17
+        Me.Label23.Text = ","
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.ForeColor = System.Drawing.Color.White
+        Me.Label24.Location = New System.Drawing.Point(628, 33)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(11, 13)
+        Me.Label24.TabIndex = 18
+        Me.Label24.Text = "||"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.ForeColor = System.Drawing.Color.White
+        Me.Label25.Location = New System.Drawing.Point(640, 33)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(49, 13)
+        Me.Label25.TabIndex = 19
+        Me.Label25.Text = "00:00:00"
+        '
+        'Timer3
+        '
+        Me.Timer3.Enabled = True
+        Me.Timer3.Interval = 1000
+        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(701, 425)
+        Me.Controls.Add(Me.Label25)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.BunifuGradientPanel1)
         Me.Controls.Add(Me.BunifuGradientPanel2)
         Me.Controls.Add(Me.PictureBox4)
@@ -928,6 +1018,7 @@ Partial Class MainMenu
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents BunifuGradientPanel2 As Bunifu.Framework.UI.BunifuGradientPanel
@@ -962,7 +1053,6 @@ Partial Class MainMenu
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Panel1 As Panel
     Friend WithEvents BunifuCustomTextbox1 As WindowsFormsControlLibrary1.BunifuCustomTextbox
-    Friend WithEvents BunifuFlatButton6 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton5 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label12 As Label
@@ -975,4 +1065,14 @@ Partial Class MainMenu
     Friend WithEvents Label16 As Label
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label22 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Timer3 As Timer
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label28 As Label
 End Class

@@ -38,14 +38,18 @@ Partial Class ScanAttPC
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New Bunifu.Framework.UI.BunifuCustomLabel()
+        Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BunifuGradientPanel1.SuspendLayout()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'StringP
         '
         Me.StringP.AutoSize = True
-        Me.StringP.Location = New System.Drawing.Point(614, 255)
+        Me.StringP.Location = New System.Drawing.Point(614, 278)
         Me.StringP.Name = "StringP"
         Me.StringP.Size = New System.Drawing.Size(39, 13)
         Me.StringP.TabIndex = 5
@@ -55,7 +59,7 @@ Partial Class ScanAttPC
         'Nami
         '
         Me.Nami.AutoSize = True
-        Me.Nami.Location = New System.Drawing.Point(659, 255)
+        Me.Nami.Location = New System.Drawing.Point(659, 278)
         Me.Nami.Name = "Nami"
         Me.Nami.Size = New System.Drawing.Size(39, 13)
         Me.Nami.TabIndex = 6
@@ -65,7 +69,7 @@ Partial Class ScanAttPC
         'PictureBox1
         '
         Me.PictureBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 35)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(200, 200)
         Me.PictureBox1.TabIndex = 7
@@ -73,7 +77,7 @@ Partial Class ScanAttPC
         '
         'PictureBox2
         '
-        Me.PictureBox2.Location = New System.Drawing.Point(246, 12)
+        Me.PictureBox2.Location = New System.Drawing.Point(246, 35)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(200, 200)
         Me.PictureBox2.TabIndex = 8
@@ -97,7 +101,7 @@ Partial Class ScanAttPC
         Me.BunifuThinButton21.IdleFillColor = System.Drawing.Color.White
         Me.BunifuThinButton21.IdleForecolor = System.Drawing.Color.Black
         Me.BunifuThinButton21.IdleLineColor = System.Drawing.Color.Honeydew
-        Me.BunifuThinButton21.Location = New System.Drawing.Point(22, 216)
+        Me.BunifuThinButton21.Location = New System.Drawing.Point(22, 239)
         Me.BunifuThinButton21.Margin = New System.Windows.Forms.Padding(5)
         Me.BunifuThinButton21.Name = "BunifuThinButton21"
         Me.BunifuThinButton21.Size = New System.Drawing.Size(181, 41)
@@ -110,7 +114,7 @@ Partial Class ScanAttPC
         Me.BunifuCustomLabel1.BackColor = System.Drawing.Color.Transparent
         Me.BunifuCustomLabel1.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BunifuCustomLabel1.ForeColor = System.Drawing.Color.White
-        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(460, 12)
+        Me.BunifuCustomLabel1.Location = New System.Drawing.Point(460, 35)
         Me.BunifuCustomLabel1.Name = "BunifuCustomLabel1"
         Me.BunifuCustomLabel1.Size = New System.Drawing.Size(105, 20)
         Me.BunifuCustomLabel1.TabIndex = 12
@@ -122,7 +126,7 @@ Partial Class ScanAttPC
         Me.BunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent
         Me.BunifuCustomLabel2.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BunifuCustomLabel2.ForeColor = System.Drawing.Color.White
-        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(460, 41)
+        Me.BunifuCustomLabel2.Location = New System.Drawing.Point(460, 64)
         Me.BunifuCustomLabel2.Name = "BunifuCustomLabel2"
         Me.BunifuCustomLabel2.Size = New System.Drawing.Size(104, 20)
         Me.BunifuCustomLabel2.TabIndex = 13
@@ -134,7 +138,7 @@ Partial Class ScanAttPC
         Me.BunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent
         Me.BunifuCustomLabel3.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BunifuCustomLabel3.ForeColor = System.Drawing.Color.White
-        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(461, 71)
+        Me.BunifuCustomLabel3.Location = New System.Drawing.Point(461, 94)
         Me.BunifuCustomLabel3.Name = "BunifuCustomLabel3"
         Me.BunifuCustomLabel3.Size = New System.Drawing.Size(149, 20)
         Me.BunifuCustomLabel3.TabIndex = 14
@@ -146,7 +150,7 @@ Partial Class ScanAttPC
         Me.StudNUm.BackColor = System.Drawing.Color.Transparent
         Me.StudNUm.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StudNUm.ForeColor = System.Drawing.Color.White
-        Me.StudNUm.Location = New System.Drawing.Point(614, 71)
+        Me.StudNUm.Location = New System.Drawing.Point(614, 94)
         Me.StudNUm.Name = "StudNUm"
         Me.StudNUm.Size = New System.Drawing.Size(142, 20)
         Me.StudNUm.TabIndex = 17
@@ -158,7 +162,7 @@ Partial Class ScanAttPC
         Me.Lname.BackColor = System.Drawing.Color.Transparent
         Me.Lname.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lname.ForeColor = System.Drawing.Color.White
-        Me.Lname.Location = New System.Drawing.Point(613, 41)
+        Me.Lname.Location = New System.Drawing.Point(613, 64)
         Me.Lname.Name = "Lname"
         Me.Lname.Size = New System.Drawing.Size(97, 20)
         Me.Lname.TabIndex = 16
@@ -170,7 +174,7 @@ Partial Class ScanAttPC
         Me.Fname.BackColor = System.Drawing.Color.Transparent
         Me.Fname.Font = New System.Drawing.Font("MS Reference Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Fname.ForeColor = System.Drawing.Color.White
-        Me.Fname.Location = New System.Drawing.Point(613, 12)
+        Me.Fname.Location = New System.Drawing.Point(613, 35)
         Me.Fname.Name = "Fname"
         Me.Fname.Size = New System.Drawing.Size(98, 20)
         Me.Fname.TabIndex = 15
@@ -183,7 +187,7 @@ Partial Class ScanAttPC
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(710, 255)
+        Me.Label2.Location = New System.Drawing.Point(710, 278)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(39, 13)
         Me.Label2.TabIndex = 18
@@ -196,11 +200,38 @@ Partial Class ScanAttPC
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("MS Reference Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(554, 150)
+        Me.Label1.Location = New System.Drawing.Point(554, 173)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(144, 24)
         Me.Label1.TabIndex = 11
         Me.Label1.Text = "Section_Label"
+        '
+        'BunifuGradientPanel1
+        '
+        Me.BunifuGradientPanel1.BackgroundImage = CType(resources.GetObject("BunifuGradientPanel1.BackgroundImage"), System.Drawing.Image)
+        Me.BunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuGradientPanel1.Controls.Add(Me.PictureBox3)
+        Me.BunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.Goldenrod
+        Me.BunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.AntiqueWhite
+        Me.BunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.YellowGreen
+        Me.BunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Yellow
+        Me.BunifuGradientPanel1.Location = New System.Drawing.Point(-1, 2)
+        Me.BunifuGradientPanel1.Name = "BunifuGradientPanel1"
+        Me.BunifuGradientPanel1.Quality = 10
+        Me.BunifuGradientPanel1.Size = New System.Drawing.Size(767, 27)
+        Me.BunifuGradientPanel1.TabIndex = 19
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox3.Image = CType(resources.GetObject("PictureBox3.Image"), System.Drawing.Image)
+        Me.PictureBox3.Location = New System.Drawing.Point(736, 1)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(28, 24)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 8
+        Me.PictureBox3.TabStop = False
         '
         'ScanAttPC
         '
@@ -208,7 +239,8 @@ Partial Class ScanAttPC
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(764, 273)
+        Me.ClientSize = New System.Drawing.Size(764, 308)
+        Me.Controls.Add(Me.BunifuGradientPanel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.StudNUm)
@@ -230,6 +262,8 @@ Partial Class ScanAttPC
         Me.TransparencyKey = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(0, Byte), Integer))
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.BunifuGradientPanel1.ResumeLayout(False)
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -248,4 +282,6 @@ Partial Class ScanAttPC
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Bunifu.Framework.UI.BunifuCustomLabel
+    Friend WithEvents BunifuGradientPanel1 As Bunifu.Framework.UI.BunifuGradientPanel
+    Friend WithEvents PictureBox3 As PictureBox
 End Class

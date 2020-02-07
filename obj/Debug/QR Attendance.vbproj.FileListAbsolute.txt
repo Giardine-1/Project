@@ -22,3 +22,5 @@ C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_
 C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\MessagingToolkit.QRCode.dll
 C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.WebcamScan.resources
 C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.ScanAttPC.resources
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.AddStuScanPC.resources
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.AddSubject.resources

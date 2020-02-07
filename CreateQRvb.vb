@@ -18,11 +18,12 @@ Public Class CreateQRvb
 
     Private Sub BunifuThinButton21_Click(sender As Object, e As EventArgs) Handles BunifuThinButton21.Click
 
-        Me.Width = 607
-        PictureBox1.Visible = False
         If StudentNumberExist(TBStuNum.Text) Then
-            MsgBox("Student Number Exists. User Already Enrolled!")
+            MsgBox("Student already has a QR Code. Use QR Code to enroll!")
+            PictureBox1.Visible = True
         Else
+            Me.Width = 607
+            PictureBox1.Visible = False
             'connect & insert to database
 
             Dim command As New MySqlCommand("INSERT INTO users(`firstname`, `surname`, `studentnumber`) VALUES (@fi, @su, @stnum)", Connection)

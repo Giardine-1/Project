@@ -83,6 +83,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStuScanPC.Designer.vb">
+      <DependentUpon>AddStuScanPC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddStuScanPC.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSubject.Designer.vb">
+      <DependentUpon>AddSubject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddSubject.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CreateQRvb.Designer.vb">
       <DependentUpon>CreateQRvb.vb</DependentUpon>
     </Compile>
@@ -131,6 +143,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddStuScanPC.resx">
+      <DependentUpon>AddStuScanPC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSubject.resx">
+      <DependentUpon>AddSubject.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateQRvb.resx">
       <DependentUpon>CreateQRvb.vb</DependentUpon>
     </EmbeddedResource>
