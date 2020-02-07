@@ -333,4 +333,45 @@ Public Class MainMenu
         Label22.Text = Date.Now.ToString("dddd")
         Label25.Text = Date.Now.ToString("h:mm:ss")
     End Sub
+
+    Private Sub BunifuFlatButton6_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton6.Click
+        Day()
+
+        If Not Label29.Text = Label22.Text Then
+            MsgBox("Your schedule is '" & Label29.Text & "', '" & Label30.Text & "'-" & Label31.Text & "'. Click 'Start Attendance For' to create an attendance.")
+        Else
+            If Date.Now.ToString("hh:mm:ss") > Label30.Text And Date.Now.ToString("hh:mm:ss") < Label31.Text Then
+                MsgBox("Simulan nayan!")
+            Else
+                MsgBox("Your schedule is " & Label29.Text & ", " & Label30.Text & "-" & Label31.Text & ". Click 'Start Attendance For' to create an attendance.")
+
+            End If
+        End If
+    End Sub
+
+    Private Sub BunifuFlatButton7_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton7.Click
+        Day()
+        If Label29.Text = Label22.Text Then
+            MsgBox("You still have time to your class. Click 'Start Attendance Now' to create an attendance.")
+        Else
+            MsgBox("Simulan na yan" & Label29.Text & " " & Label30.Text & ".")
+        End If
+
+    End Sub
+
+    Sub Day()
+        Dim Day As New MySqlCommand("SELECT * FROM `section` WHERE `id`='" & Label19.Text & "'", connection)
+        reader = Nothing
+        connection.Open()
+        reader = Day.ExecuteReader
+        If reader.Read Then
+            Label29.Text = reader(3)
+            Label30.Text = reader(4).ToString
+            Label31.Text = reader(5).ToString
+            connection.Close()
+        Else
+            MsgBox("There is a problem in making your attendance sheet.")
+            connection.Close()
+        End If
+    End Sub
 End Class
