@@ -334,6 +334,7 @@ Public Class MainMenu
         Label25.Text = Date.Now.ToString("h:mm:ss")
     End Sub
 
+    'Start Attendance Now
     Private Sub BunifuFlatButton6_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton6.Click
         Day()
 
@@ -341,6 +342,7 @@ Public Class MainMenu
             MsgBox("Your schedule is '" & Label29.Text & "', '" & Label30.Text & "'-" & Label31.Text & "'. Click 'Start Attendance For' to create an attendance.")
         Else
             If Date.Now.ToString("hh:mm:ss") > Label30.Text And Date.Now.ToString("hh:mm:ss") < Label31.Text Then
+                ScanPC.Visible = True
                 MsgBox("Simulan nayan!")
             Else
                 MsgBox("Your schedule is " & Label29.Text & ", " & Label30.Text & "-" & Label31.Text & ". Click 'Start Attendance For' to create an attendance.")
@@ -349,12 +351,18 @@ Public Class MainMenu
         End If
     End Sub
 
+    'Start attendance For
     Private Sub BunifuFlatButton7_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton7.Click
         Day()
         If Label29.Text = Label22.Text Then
-            MsgBox("You still have time to your class. Click 'Start Attendance Now' to create an attendance.")
+            MsgBox("You still have time to your class. Click 'Start Attendance Now' to easily create an attendance.")
         Else
-            MsgBox("Simulan na yan" & Label29.Text & " " & Label30.Text & ".")
+            StartAttFor.Name4 = StringPass
+            StartAttFor.User4 = Username
+            StartAttFor.Secid4 = Label19.Text
+            StartAttFor.Show()
+            Me.Hide()
+
         End If
 
     End Sub

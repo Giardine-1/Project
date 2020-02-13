@@ -135,6 +135,12 @@
     <Compile Include="ScanAttPC.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="StartAttFor.Designer.vb">
+      <DependentUpon>StartAttFor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="StartAttFor.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WebcamScan.Designer.vb">
       <DependentUpon>WebcamScan.vb</DependentUpon>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ScanAttPC.resx">
       <DependentUpon>ScanAttPC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartAttFor.resx">
+      <DependentUpon>StartAttFor.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WebcamScan.resx">
       <DependentUpon>WebcamScan.vb</DependentUpon>
