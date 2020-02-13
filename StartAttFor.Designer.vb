@@ -207,6 +207,7 @@ Partial Class StartAttFor
         Me.Label2.Size = New System.Drawing.Size(39, 13)
         Me.Label2.TabIndex = 22
         Me.Label2.Text = "Label2"
+        Me.Label2.Visible = False
         '
         'BunifuFlatButton7
         '
@@ -229,7 +230,7 @@ Partial Class StartAttFor
         Me.BunifuFlatButton7.IconVisible = True
         Me.BunifuFlatButton7.IconZoom = 90.0R
         Me.BunifuFlatButton7.IsTab = False
-        Me.BunifuFlatButton7.Location = New System.Drawing.Point(30, 130)
+        Me.BunifuFlatButton7.Location = New System.Drawing.Point(42, 130)
         Me.BunifuFlatButton7.Margin = New System.Windows.Forms.Padding(7, 20, 7, 20)
         Me.BunifuFlatButton7.Name = "BunifuFlatButton7"
         Me.BunifuFlatButton7.Normalcolor = System.Drawing.Color.DimGray
@@ -264,7 +265,7 @@ Partial Class StartAttFor
         Me.BunifuFlatButton6.IconVisible = True
         Me.BunifuFlatButton6.IconZoom = 90.0R
         Me.BunifuFlatButton6.IsTab = False
-        Me.BunifuFlatButton6.Location = New System.Drawing.Point(30, 80)
+        Me.BunifuFlatButton6.Location = New System.Drawing.Point(42, 80)
         Me.BunifuFlatButton6.Margin = New System.Windows.Forms.Padding(5, 11, 5, 11)
         Me.BunifuFlatButton6.Name = "BunifuFlatButton6"
         Me.BunifuFlatButton6.Normalcolor = System.Drawing.Color.DimGray
@@ -475,9 +476,9 @@ Partial Class StartAttFor
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(60, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(321, 248)
-        Me.Controls.Add(Me.Panel3)
+        Me.ClientSize = New System.Drawing.Size(322, 250)
         Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Panel3)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label23)
         Me.Controls.Add(Me.Label25)

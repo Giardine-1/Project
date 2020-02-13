@@ -51,8 +51,11 @@ Partial Class MainMenu
         Me.BunifuFlatButton1 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton2 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.StartBox = New System.Windows.Forms.GroupBox()
+        Me.BunifuFlatButton8 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton7 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton6 = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.ScanPC = New Bunifu.Framework.UI.BunifuFlatButton()
+        Me.ScanWeb = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.AddStudent = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.StartAttendance = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.ClassList = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -81,8 +84,6 @@ Partial Class MainMenu
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
-        Me.ScanPC = New Bunifu.Framework.UI.BunifuFlatButton()
-        Me.ScanWeb = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuGradientPanel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -556,6 +557,7 @@ Partial Class MainMenu
         'StartBox
         '
         Me.StartBox.BackColor = System.Drawing.Color.Transparent
+        Me.StartBox.Controls.Add(Me.BunifuFlatButton8)
         Me.StartBox.Controls.Add(Me.BunifuFlatButton7)
         Me.StartBox.Controls.Add(Me.BunifuFlatButton6)
         Me.StartBox.Controls.Add(Me.ScanPC)
@@ -563,10 +565,46 @@ Partial Class MainMenu
         Me.StartBox.Font = New System.Drawing.Font("Myanmar Text", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StartBox.Location = New System.Drawing.Point(299, 43)
         Me.StartBox.Name = "StartBox"
-        Me.StartBox.Size = New System.Drawing.Size(254, 200)
+        Me.StartBox.Size = New System.Drawing.Size(254, 218)
         Me.StartBox.TabIndex = 12
         Me.StartBox.TabStop = False
         Me.StartBox.Text = "Start Attendance"
+        '
+        'BunifuFlatButton8
+        '
+        Me.BunifuFlatButton8.Activecolor = System.Drawing.Color.DimGray
+        Me.BunifuFlatButton8.BackColor = System.Drawing.Color.DimGray
+        Me.BunifuFlatButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuFlatButton8.BorderRadius = 0
+        Me.BunifuFlatButton8.ButtonText = "Scan  through Web Cam"
+        Me.BunifuFlatButton8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.BunifuFlatButton8.DisabledColor = System.Drawing.Color.Gray
+        Me.BunifuFlatButton8.Iconcolor = System.Drawing.Color.Transparent
+        Me.BunifuFlatButton8.Iconimage = Nothing
+        Me.BunifuFlatButton8.Iconimage_right = Nothing
+        Me.BunifuFlatButton8.Iconimage_right_Selected = Nothing
+        Me.BunifuFlatButton8.Iconimage_Selected = Nothing
+        Me.BunifuFlatButton8.IconMarginLeft = 0
+        Me.BunifuFlatButton8.IconMarginRight = 0
+        Me.BunifuFlatButton8.IconRightVisible = True
+        Me.BunifuFlatButton8.IconRightZoom = 0R
+        Me.BunifuFlatButton8.IconVisible = True
+        Me.BunifuFlatButton8.IconZoom = 90.0R
+        Me.BunifuFlatButton8.IsTab = False
+        Me.BunifuFlatButton8.Location = New System.Drawing.Point(38, 176)
+        Me.BunifuFlatButton8.Margin = New System.Windows.Forms.Padding(9, 37, 9, 37)
+        Me.BunifuFlatButton8.Name = "BunifuFlatButton8"
+        Me.BunifuFlatButton8.Normalcolor = System.Drawing.Color.DimGray
+        Me.BunifuFlatButton8.OnHovercolor = System.Drawing.Color.Black
+        Me.BunifuFlatButton8.OnHoverTextColor = System.Drawing.Color.White
+        Me.BunifuFlatButton8.selected = False
+        Me.BunifuFlatButton8.Size = New System.Drawing.Size(192, 33)
+        Me.BunifuFlatButton8.TabIndex = 15
+        Me.BunifuFlatButton8.Text = "Scan  through Web Cam"
+        Me.BunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuFlatButton8.Textcolor = System.Drawing.Color.White
+        Me.BunifuFlatButton8.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BunifuFlatButton8.Visible = False
         '
         'BunifuFlatButton7
         '
@@ -589,7 +627,7 @@ Partial Class MainMenu
         Me.BunifuFlatButton7.IconVisible = True
         Me.BunifuFlatButton7.IconZoom = 90.0R
         Me.BunifuFlatButton7.IsTab = False
-        Me.BunifuFlatButton7.Location = New System.Drawing.Point(22, 37)
+        Me.BunifuFlatButton7.Location = New System.Drawing.Point(20, 32)
         Me.BunifuFlatButton7.Margin = New System.Windows.Forms.Padding(7, 20, 7, 20)
         Me.BunifuFlatButton7.Name = "BunifuFlatButton7"
         Me.BunifuFlatButton7.Normalcolor = System.Drawing.Color.DimGray
@@ -624,7 +662,7 @@ Partial Class MainMenu
         Me.BunifuFlatButton6.IconVisible = True
         Me.BunifuFlatButton6.IconZoom = 90.0R
         Me.BunifuFlatButton6.IsTab = False
-        Me.BunifuFlatButton6.Location = New System.Drawing.Point(22, 88)
+        Me.BunifuFlatButton6.Location = New System.Drawing.Point(20, 83)
         Me.BunifuFlatButton6.Margin = New System.Windows.Forms.Padding(5, 11, 5, 11)
         Me.BunifuFlatButton6.Name = "BunifuFlatButton6"
         Me.BunifuFlatButton6.Normalcolor = System.Drawing.Color.DimGray
@@ -637,6 +675,77 @@ Partial Class MainMenu
         Me.BunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.BunifuFlatButton6.Textcolor = System.Drawing.Color.White
         Me.BunifuFlatButton6.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '
+        'ScanPC
+        '
+        Me.ScanPC.Activecolor = System.Drawing.Color.DimGray
+        Me.ScanPC.BackColor = System.Drawing.Color.DimGray
+        Me.ScanPC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ScanPC.BorderRadius = 0
+        Me.ScanPC.ButtonText = "Scan through PC"
+        Me.ScanPC.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ScanPC.DisabledColor = System.Drawing.Color.Gray
+        Me.ScanPC.Iconcolor = System.Drawing.Color.Transparent
+        Me.ScanPC.Iconimage = Nothing
+        Me.ScanPC.Iconimage_right = Nothing
+        Me.ScanPC.Iconimage_right_Selected = Nothing
+        Me.ScanPC.Iconimage_Selected = Nothing
+        Me.ScanPC.IconMarginLeft = 0
+        Me.ScanPC.IconMarginRight = 0
+        Me.ScanPC.IconRightVisible = True
+        Me.ScanPC.IconRightZoom = 0R
+        Me.ScanPC.IconVisible = True
+        Me.ScanPC.IconZoom = 90.0R
+        Me.ScanPC.IsTab = False
+        Me.ScanPC.Location = New System.Drawing.Point(38, 135)
+        Me.ScanPC.Margin = New System.Windows.Forms.Padding(7, 20, 7, 20)
+        Me.ScanPC.Name = "ScanPC"
+        Me.ScanPC.Normalcolor = System.Drawing.Color.DimGray
+        Me.ScanPC.OnHovercolor = System.Drawing.Color.Black
+        Me.ScanPC.OnHoverTextColor = System.Drawing.Color.White
+        Me.ScanPC.selected = False
+        Me.ScanPC.Size = New System.Drawing.Size(192, 33)
+        Me.ScanPC.TabIndex = 12
+        Me.ScanPC.Text = "Scan through PC"
+        Me.ScanPC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ScanPC.Textcolor = System.Drawing.Color.White
+        Me.ScanPC.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ScanPC.Visible = False
+        '
+        'ScanWeb
+        '
+        Me.ScanWeb.Activecolor = System.Drawing.Color.DimGray
+        Me.ScanWeb.BackColor = System.Drawing.Color.DimGray
+        Me.ScanWeb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ScanWeb.BorderRadius = 0
+        Me.ScanWeb.ButtonText = "Scan via Webcam"
+        Me.ScanWeb.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.ScanWeb.DisabledColor = System.Drawing.Color.Gray
+        Me.ScanWeb.Iconcolor = System.Drawing.Color.Transparent
+        Me.ScanWeb.Iconimage = Nothing
+        Me.ScanWeb.Iconimage_right = Nothing
+        Me.ScanWeb.Iconimage_right_Selected = Nothing
+        Me.ScanWeb.Iconimage_Selected = Nothing
+        Me.ScanWeb.IconMarginLeft = 0
+        Me.ScanWeb.IconMarginRight = 0
+        Me.ScanWeb.IconRightVisible = True
+        Me.ScanWeb.IconRightZoom = 0R
+        Me.ScanWeb.IconVisible = True
+        Me.ScanWeb.IconZoom = 90.0R
+        Me.ScanWeb.IsTab = False
+        Me.ScanWeb.Location = New System.Drawing.Point(41, 227)
+        Me.ScanWeb.Margin = New System.Windows.Forms.Padding(5, 11, 5, 11)
+        Me.ScanWeb.Name = "ScanWeb"
+        Me.ScanWeb.Normalcolor = System.Drawing.Color.DimGray
+        Me.ScanWeb.OnHovercolor = System.Drawing.Color.Black
+        Me.ScanWeb.OnHoverTextColor = System.Drawing.Color.White
+        Me.ScanWeb.selected = False
+        Me.ScanWeb.Size = New System.Drawing.Size(252, 59)
+        Me.ScanWeb.TabIndex = 11
+        Me.ScanWeb.Text = "Scan via Webcam"
+        Me.ScanWeb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ScanWeb.Textcolor = System.Drawing.Color.White
+        Me.ScanWeb.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'AddStudent
         '
@@ -1028,77 +1137,6 @@ Partial Class MainMenu
         Me.Label31.Text = "Label31"
         Me.Label31.Visible = False
         '
-        'ScanPC
-        '
-        Me.ScanPC.Activecolor = System.Drawing.Color.DimGray
-        Me.ScanPC.BackColor = System.Drawing.Color.DimGray
-        Me.ScanPC.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ScanPC.BorderRadius = 0
-        Me.ScanPC.ButtonText = "Scan through PC"
-        Me.ScanPC.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ScanPC.DisabledColor = System.Drawing.Color.Gray
-        Me.ScanPC.Iconcolor = System.Drawing.Color.Transparent
-        Me.ScanPC.Iconimage = Nothing
-        Me.ScanPC.Iconimage_right = Nothing
-        Me.ScanPC.Iconimage_right_Selected = Nothing
-        Me.ScanPC.Iconimage_Selected = Nothing
-        Me.ScanPC.IconMarginLeft = 0
-        Me.ScanPC.IconMarginRight = 0
-        Me.ScanPC.IconRightVisible = True
-        Me.ScanPC.IconRightZoom = 0R
-        Me.ScanPC.IconVisible = True
-        Me.ScanPC.IconZoom = 90.0R
-        Me.ScanPC.IsTab = False
-        Me.ScanPC.Location = New System.Drawing.Point(38, 135)
-        Me.ScanPC.Margin = New System.Windows.Forms.Padding(7, 20, 7, 20)
-        Me.ScanPC.Name = "ScanPC"
-        Me.ScanPC.Normalcolor = System.Drawing.Color.DimGray
-        Me.ScanPC.OnHovercolor = System.Drawing.Color.Black
-        Me.ScanPC.OnHoverTextColor = System.Drawing.Color.White
-        Me.ScanPC.selected = False
-        Me.ScanPC.Size = New System.Drawing.Size(192, 31)
-        Me.ScanPC.TabIndex = 12
-        Me.ScanPC.Text = "Scan through PC"
-        Me.ScanPC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ScanPC.Textcolor = System.Drawing.Color.White
-        Me.ScanPC.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ScanPC.Visible = False
-        '
-        'ScanWeb
-        '
-        Me.ScanWeb.Activecolor = System.Drawing.Color.DimGray
-        Me.ScanWeb.BackColor = System.Drawing.Color.DimGray
-        Me.ScanWeb.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ScanWeb.BorderRadius = 0
-        Me.ScanWeb.ButtonText = "Scan via Webcam"
-        Me.ScanWeb.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.ScanWeb.DisabledColor = System.Drawing.Color.Gray
-        Me.ScanWeb.Iconcolor = System.Drawing.Color.Transparent
-        Me.ScanWeb.Iconimage = Nothing
-        Me.ScanWeb.Iconimage_right = Nothing
-        Me.ScanWeb.Iconimage_right_Selected = Nothing
-        Me.ScanWeb.Iconimage_Selected = Nothing
-        Me.ScanWeb.IconMarginLeft = 0
-        Me.ScanWeb.IconMarginRight = 0
-        Me.ScanWeb.IconRightVisible = True
-        Me.ScanWeb.IconRightZoom = 0R
-        Me.ScanWeb.IconVisible = True
-        Me.ScanWeb.IconZoom = 90.0R
-        Me.ScanWeb.IsTab = False
-        Me.ScanWeb.Location = New System.Drawing.Point(41, 227)
-        Me.ScanWeb.Margin = New System.Windows.Forms.Padding(5, 11, 5, 11)
-        Me.ScanWeb.Name = "ScanWeb"
-        Me.ScanWeb.Normalcolor = System.Drawing.Color.DimGray
-        Me.ScanWeb.OnHovercolor = System.Drawing.Color.Black
-        Me.ScanWeb.OnHoverTextColor = System.Drawing.Color.White
-        Me.ScanWeb.selected = False
-        Me.ScanWeb.Size = New System.Drawing.Size(252, 59)
-        Me.ScanWeb.TabIndex = 11
-        Me.ScanWeb.Text = "Scan via Webcam"
-        Me.ScanWeb.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.ScanWeb.Textcolor = System.Drawing.Color.White
-        Me.ScanWeb.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1200,4 +1238,5 @@ Partial Class MainMenu
     Friend WithEvents BunifuFlatButton7 As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents ScanPC As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents ScanWeb As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents BunifuFlatButton8 As Bunifu.Framework.UI.BunifuFlatButton
 End Class

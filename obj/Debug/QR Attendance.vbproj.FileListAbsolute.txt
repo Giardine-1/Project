@@ -25,3 +25,4 @@ C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_
 C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.AddStuScanPC.resources
 C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.AddSubject.resources
 C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\obj\Debug\QR_Attendance.StartAttFor.resources
+C:\Users\Giardine Sumague\source\repos\QR Attendance\QR Attendance\bin\Debug\WebCam_Capture.dll

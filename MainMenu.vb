@@ -162,7 +162,7 @@ Public Class MainMenu
     'go to scan attendance
     Private Sub ScanPC_Click(sender As Object, e As EventArgs) Handles ScanPC.Click
         Me.Hide()
-
+        StartBox.Height = 133
         ScanAttPC.Name1 = StringPass
         ScanAttPC.User1 = Username
         ScanAttPC.Sec1 = Label10.Text
@@ -343,7 +343,10 @@ Public Class MainMenu
         Else
             If Date.Now.ToString("hh:mm:ss") > Label30.Text And Date.Now.ToString("hh:mm:ss") < Label31.Text Then
                 ScanPC.Visible = True
+                BunifuFlatButton8.Visible = True
+                StartBox.Height = 218
                 MsgBox("Simulan nayan!")
+
             Else
                 MsgBox("Your schedule is " & Label29.Text & ", " & Label30.Text & "-" & Label31.Text & ". Click 'Start Attendance For' to create an attendance.")
 
@@ -381,5 +384,14 @@ Public Class MainMenu
             MsgBox("There is a problem in making your attendance sheet.")
             connection.Close()
         End If
+    End Sub
+
+    Private Sub BunifuFlatButton8_Click(sender As Object, e As EventArgs) Handles BunifuFlatButton8.Click
+        WebcamScan.Name1 = StringPass
+        WebcamScan.User1 = Username
+        WebcamScan.Sec1 = Label10.Text
+        WebcamScan.Secid = Label19.Text
+        Me.Hide()
+        WebcamScan.Show()
     End Sub
 End Class

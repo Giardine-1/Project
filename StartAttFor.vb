@@ -45,7 +45,7 @@ Public Class StartAttFor
             PictureBox4.Visible = False
             Panel2.Visible = True
             Me.Width = 787
-            Me.Height = 584
+            Me.Height = 343
             Connection.Close()
         End If
     End Sub
@@ -93,6 +93,7 @@ Public Class StartAttFor
 
 
         If reader.Read Then
+
             Fname.Text = reader(1)
             Lname.Text = reader(2)
 
@@ -101,6 +102,10 @@ Public Class StartAttFor
             If StudentExist(StudNUm.Text) Then
                 MsgBox("Student is already in the attendance!")
             Else
+                If Not Me.Height = 584 Then
+                    Me.Height = 584
+                End If
+
                 Dim ins As New MySqlCommand("INSERT INTO `records_attendance`(`Time`, `firstname`, `lastname`, `student number`, `Date`, `section_id`) VALUES(@tim, @fn, @ln, @sn, @dat, @scc)", Connection)
                 ins.Parameters.Add("@tim", MySqlDbType.Text).Value = Label4.Text
                 ins.Parameters.Add("@fn", MySqlDbType.VarChar).Value = Fname.Text

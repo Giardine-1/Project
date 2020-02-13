@@ -8,6 +8,16 @@ Public Class ScanAttPC
     Public Property Name1 As String
     Public Property Secid As String
 
+    Sub List()
+
+        Dim query As String = "select * from records_attendance where section_id='" & Label2.Text & "' AND Date ='" & Label4.Text & "' "
+        Dim ds As New DataSet
+        Dim adp As New MySqlDataAdapter(query, Connection)
+        adp.Fill(ds, "EMP")
+        DataGridView1.DataSource = ds.Tables(0)
+        Connection.Close()
+    End Sub
+
     Dim something As QRCodeDecoder
     Dim pic As Bitmap = New Bitmap(190, 190)
     Dim gfx As Graphics = Graphics.FromImage(pic)
@@ -27,14 +37,6 @@ Public Class ScanAttPC
 
     End Sub
 
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Connection.Close()
-        MainMenu.Username = Nami.Text
-        MainMenu.StringPass = StringP.Text
-        MainMenu.Show()
-    End Sub
-
     Private Sub BunifuThinButton21_Click(sender As Object, e As EventArgs) Handles BunifuThinButton21.Click
         PictureBox2.Image = pic
 
@@ -52,47 +54,83 @@ Public Class ScanAttPC
 
         reader = Nothing
 
-            Dim Query As String
-        Query = "select * from section_users where sec_id='" & Label2.Text & "' "
+        Dim Query As String
+        Query = "select * from section_users where sec_id='" & Label2.Text & "' AND  Student_Number ='" & StudNUm.Text & "' "
         Dim command As New MySqlCommand(Query, Connection)
-            Dim array(5) As String
-            Dim count As Byte
-            Dim sec As Boolean = True
-            count = 0
-            Connection.Open()
-            reader = command.ExecuteReader
+        reader = Nothing
+        Connection.Open()
+        reader = command.ExecuteReader
 
-            While reader.Read
-                While sec = True
-                    array(count) = reader(3)
+
+        If reader.Read Then
+            Fname.Text = reader(1)
+            Lname.Text = reader(2)
+
+            MessageBox.Show("Student is enrolled in this Section")
+            Connection.Close()
+            If StudentExist(StudNUm.Text) Then
+                MsgBox("Student is already in the attendance!")
+            Else
+                Dim ins As New MySqlCommand("INSERT INTO `records_attendance`(`Time`, `firstname`, `lastname`, `student number`, `Date`, `section_id`) VALUES(@tim, @fn, @ln, @sn, @dat, @scc)", Connection)
+                ins.Parameters.Add("@tim", MySqlDbType.Text).Value = Label3.Text
+                ins.Parameters.Add("@fn", MySqlDbType.VarChar).Value = Fname.Text
+                ins.Parameters.Add("@ln", MySqlDbType.VarChar).Value = Lname.Text
+                ins.Parameters.Add("@sn", MySqlDbType.VarChar).Value = StudNUm.Text
+                ins.Parameters.Add("@dat", MySqlDbType.Text).Value = Label4.Text
+                ins.Parameters.Add("@scc", MySqlDbType.Int16).Value = Label2.Text
+
+                Connection.Open()
+                If ins.ExecuteNonQuery() = 1 Then
+                    MsgBox("Student is now at attendance")
                     Connection.Close()
-
-                    If array(count) = StudNUm.Text Then
-                        Dim First As New MySqlCommand("SELECT * FROM section_users WHERE Student_Number ='" & StudNUm.Text & "' ", Connection)
-                        reader = Nothing
-                        Connection.Open()
-                        reader = First.ExecuteReader
-                        MsgBox("pumasok sa student number")
-                        If reader.Read Then
-                        Fname.Text = reader(1)
-                        Lname.Text = reader(2)
-                        MessageBox.Show("Student is enrolled in this Section")
-
-                        'dito mo ipasok yung sa attendance!
-                        Connection.Close()
-                            sec = False
-                        End If
-                    Else
-                        MsgBox("hindi pumasok sa student number")
+                    List()
+                    If Not Me.Height = 547 Then
+                        Me.Height = 547
                     End If
-                    Connection.Open()
-                    reader = command.ExecuteReader
-                    count = count + 1
-                End While
-            End While
+
+                Else
+                    MsgBox("Error!")
+                End If
+
+            End If
+        Else
+            MsgBox("Student is not enrolled in this section")
             Connection.Close()
 
+        End If
 
 
+
+    End Sub
+    Public Function StudentExist(ByVal username As String) As Boolean
+
+        Dim table As New DataTable()
+        Dim adapter As New MySqlDataAdapter()
+        Dim command As New MySqlCommand("SELECT * FROM `records_attendance` WHERE `student number`=@sn AND `Date`=@dat AND `section_id`=@secc", Connection)
+        command.Parameters.Add("@sn", MySqlDbType.VarChar).Value = StudNUm.Text
+        command.Parameters.Add("@dat", MySqlDbType.Text).Value = Label4.Text
+        command.Parameters.Add("@secc", MySqlDbType.Int16).Value = Label2.Text
+        adapter.SelectCommand = command
+        adapter.Fill(table)
+
+
+        If table.Rows.Count > 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
+        Label3.Text = Date.Now.ToString("hh:mm:ss")
+        Label4.Text = Date.Now.ToString("dd/MM/yyyy")
+    End Sub
+
+    Private Sub PictureBox3_Click_1(sender As Object, e As EventArgs) Handles PictureBox3.Click
+        MainMenu.Username = Nami.Text
+        MainMenu.StringPass = StringP.Text
+        Me.Hide()
+        Connection.Close()
+        MainMenu.Show()
     End Sub
 End Class
