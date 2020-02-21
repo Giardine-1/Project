@@ -44,7 +44,21 @@ Partial Class MainMenu
         Me.BunifuGradientPanel1 = New Bunifu.Framework.UI.BunifuGradientPanel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BunifuGradientPanel3 = New Bunifu.Framework.UI.BunifuGradientPanel()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.Label36 = New System.Windows.Forms.Label()
+        Me.Label35 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label32 = New System.Windows.Forms.Label()
         Me.Label19 = New System.Windows.Forms.Label()
+        Me.View = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.ADDSTU = New System.Windows.Forms.GroupBox()
         Me.BunifuFlatButton3 = New Bunifu.Framework.UI.BunifuFlatButton()
         Me.BunifuFlatButton4 = New Bunifu.Framework.UI.BunifuFlatButton()
@@ -84,18 +98,30 @@ Partial Class MainMenu
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.Label30 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.Label49 = New System.Windows.Forms.Label()
+        Me.BunifuCustomTextbox2 = New WindowsFormsControlLibrary1.BunifuCustomTextbox()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.Label46 = New System.Windows.Forms.Label()
         Me.BunifuGradientPanel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BunifuGradientPanel1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BunifuGradientPanel3.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.ADDSTU.SuspendLayout()
         Me.StartBox.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel2.SuspendLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BunifuGradientPanel2
@@ -364,7 +390,11 @@ Partial Class MainMenu
         '
         Me.BunifuGradientPanel3.BackgroundImage = CType(resources.GetObject("BunifuGradientPanel3.BackgroundImage"), System.Drawing.Image)
         Me.BunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BunifuGradientPanel3.Controls.Add(Me.Label46)
+        Me.BunifuGradientPanel3.Controls.Add(Me.Label45)
+        Me.BunifuGradientPanel3.Controls.Add(Me.GroupBox1)
         Me.BunifuGradientPanel3.Controls.Add(Me.Label19)
+        Me.BunifuGradientPanel3.Controls.Add(Me.View)
         Me.BunifuGradientPanel3.Controls.Add(Me.ADDSTU)
         Me.BunifuGradientPanel3.Controls.Add(Me.StartBox)
         Me.BunifuGradientPanel3.Controls.Add(Me.AddStudent)
@@ -384,6 +414,150 @@ Partial Class MainMenu
         Me.BunifuGradientPanel3.TabIndex = 9
         Me.BunifuGradientPanel3.Visible = False
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox1.Controls.Add(Me.Label43)
+        Me.GroupBox1.Controls.Add(Me.Label42)
+        Me.GroupBox1.Controls.Add(Me.Label41)
+        Me.GroupBox1.Controls.Add(Me.Label40)
+        Me.GroupBox1.Controls.Add(Me.Label39)
+        Me.GroupBox1.Controls.Add(Me.Label38)
+        Me.GroupBox1.Controls.Add(Me.Label37)
+        Me.GroupBox1.Controls.Add(Me.Label36)
+        Me.GroupBox1.Controls.Add(Me.Label35)
+        Me.GroupBox1.Controls.Add(Me.Label34)
+        Me.GroupBox1.Controls.Add(Me.Label33)
+        Me.GroupBox1.Controls.Add(Me.Label32)
+        Me.GroupBox1.Font = New System.Drawing.Font("Nirmala UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(302, 53)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(253, 204)
+        Me.GroupBox1.TabIndex = 17
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Attendance"
+        Me.GroupBox1.Visible = False
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label43.Location = New System.Drawing.Point(136, 169)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(100, 17)
+        Me.Label43.TabIndex = 11
+        Me.Label43.Text = "No Attendance"
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label42.Location = New System.Drawing.Point(136, 142)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(100, 17)
+        Me.Label42.TabIndex = 10
+        Me.Label42.Text = "No Attendance"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label41.Location = New System.Drawing.Point(136, 113)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(100, 17)
+        Me.Label41.TabIndex = 9
+        Me.Label41.Text = "No Attendance"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label40.Location = New System.Drawing.Point(136, 84)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(100, 17)
+        Me.Label40.TabIndex = 8
+        Me.Label40.Text = "No Attendance"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label39.Location = New System.Drawing.Point(136, 55)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(100, 17)
+        Me.Label39.TabIndex = 7
+        Me.Label39.Text = "No Attendance"
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label38.Location = New System.Drawing.Point(136, 27)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(100, 17)
+        Me.Label38.TabIndex = 6
+        Me.Label38.Text = "No Attendance"
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label37.Location = New System.Drawing.Point(23, 169)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(100, 17)
+        Me.Label37.TabIndex = 5
+        Me.Label37.Text = "No Attendance"
+        '
+        'Label36
+        '
+        Me.Label36.AutoSize = True
+        Me.Label36.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label36.Location = New System.Drawing.Point(23, 142)
+        Me.Label36.Name = "Label36"
+        Me.Label36.Size = New System.Drawing.Size(100, 17)
+        Me.Label36.TabIndex = 4
+        Me.Label36.Text = "No Attendance"
+        '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label35.Location = New System.Drawing.Point(23, 113)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(100, 17)
+        Me.Label35.TabIndex = 3
+        Me.Label35.Text = "No Attendance"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label34.Location = New System.Drawing.Point(23, 84)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(100, 17)
+        Me.Label34.TabIndex = 2
+        Me.Label34.Text = "No Attendance"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label33.Location = New System.Drawing.Point(23, 55)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(100, 17)
+        Me.Label33.TabIndex = 1
+        Me.Label33.Text = "No Attendance"
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label32.Location = New System.Drawing.Point(23, 28)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(100, 17)
+        Me.Label32.TabIndex = 0
+        Me.Label32.Text = "No Attendance"
+        '
         'Label19
         '
         Me.Label19.AutoSize = True
@@ -396,6 +570,40 @@ Partial Class MainMenu
         Me.Label19.TabIndex = 14
         Me.Label19.Text = "Label19"
         Me.Label19.Visible = False
+        '
+        'View
+        '
+        Me.View.Activecolor = System.Drawing.Color.DimGray
+        Me.View.BackColor = System.Drawing.Color.Black
+        Me.View.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.View.BorderRadius = 0
+        Me.View.ButtonText = "View Existing Attendance"
+        Me.View.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.View.DisabledColor = System.Drawing.Color.Gray
+        Me.View.Iconcolor = System.Drawing.Color.Transparent
+        Me.View.Iconimage = Nothing
+        Me.View.Iconimage_right = Nothing
+        Me.View.Iconimage_right_Selected = Nothing
+        Me.View.Iconimage_Selected = Nothing
+        Me.View.IconMarginLeft = 0
+        Me.View.IconMarginRight = 0
+        Me.View.IconRightVisible = True
+        Me.View.IconRightZoom = 0R
+        Me.View.IconVisible = True
+        Me.View.IconZoom = 90.0R
+        Me.View.IsTab = False
+        Me.View.Location = New System.Drawing.Point(41, 170)
+        Me.View.Name = "View"
+        Me.View.Normalcolor = System.Drawing.Color.Black
+        Me.View.OnHovercolor = System.Drawing.Color.DimGray
+        Me.View.OnHoverTextColor = System.Drawing.Color.White
+        Me.View.selected = False
+        Me.View.Size = New System.Drawing.Size(240, 39)
+        Me.View.TabIndex = 15
+        Me.View.Text = "View Existing Attendance"
+        Me.View.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.View.Textcolor = System.Drawing.Color.White
+        Me.View.TextFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         '
         'ADDSTU
         '
@@ -565,7 +773,7 @@ Partial Class MainMenu
         Me.StartBox.Font = New System.Drawing.Font("Myanmar Text", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.StartBox.Location = New System.Drawing.Point(299, 43)
         Me.StartBox.Name = "StartBox"
-        Me.StartBox.Size = New System.Drawing.Size(254, 218)
+        Me.StartBox.Size = New System.Drawing.Size(254, 0)
         Me.StartBox.TabIndex = 12
         Me.StartBox.TabStop = False
         Me.StartBox.Text = "Start Attendance"
@@ -768,7 +976,7 @@ Partial Class MainMenu
         Me.AddStudent.IconVisible = True
         Me.AddStudent.IconZoom = 90.0R
         Me.AddStudent.IsTab = False
-        Me.AddStudent.Location = New System.Drawing.Point(41, 184)
+        Me.AddStudent.Location = New System.Drawing.Point(41, 222)
         Me.AddStudent.Name = "AddStudent"
         Me.AddStudent.Normalcolor = System.Drawing.Color.Black
         Me.AddStudent.OnHovercolor = System.Drawing.Color.DimGray
@@ -802,7 +1010,7 @@ Partial Class MainMenu
         Me.StartAttendance.IconVisible = True
         Me.StartAttendance.IconZoom = 90.0R
         Me.StartAttendance.IsTab = False
-        Me.StartAttendance.Location = New System.Drawing.Point(41, 125)
+        Me.StartAttendance.Location = New System.Drawing.Point(41, 118)
         Me.StartAttendance.Name = "StartAttendance"
         Me.StartAttendance.Normalcolor = System.Drawing.Color.Black
         Me.StartAttendance.OnHovercolor = System.Drawing.Color.DimGray
@@ -1137,12 +1345,103 @@ Partial Class MainMenu
         Me.Label31.Text = "Label31"
         Me.Label31.Visible = False
         '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label44.Location = New System.Drawing.Point(605, 411)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(45, 13)
+        Me.Label44.TabIndex = 12
+        Me.Label44.Text = "Label44"
+        Me.Label44.Visible = False
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Controls.Add(Me.PictureBox6)
+        Me.Panel2.Controls.Add(Me.Label49)
+        Me.Panel2.Controls.Add(Me.BunifuCustomTextbox2)
+        Me.Panel2.Controls.Add(Me.DataGridView2)
+        Me.Panel2.Location = New System.Drawing.Point(115, 52)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(521, 362)
+        Me.Panel2.TabIndex = 25
+        Me.Panel2.Visible = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.PictureBox6.Image = CType(resources.GetObject("PictureBox6.Image"), System.Drawing.Image)
+        Me.PictureBox6.Location = New System.Drawing.Point(490, 3)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(28, 24)
+        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox6.TabIndex = 9
+        Me.PictureBox6.TabStop = False
+        '
+        'Label49
+        '
+        Me.Label49.AutoSize = True
+        Me.Label49.BackColor = System.Drawing.Color.Transparent
+        Me.Label49.Font = New System.Drawing.Font("MS Reference Sans Serif", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label49.ForeColor = System.Drawing.Color.White
+        Me.Label49.Location = New System.Drawing.Point(1, 7)
+        Me.Label49.Name = "Label49"
+        Me.Label49.Size = New System.Drawing.Size(184, 18)
+        Me.Label49.TabIndex = 14
+        Me.Label49.Text = "Search Student Number:"
+        '
+        'BunifuCustomTextbox2
+        '
+        Me.BunifuCustomTextbox2.BorderColor = System.Drawing.Color.SeaGreen
+        Me.BunifuCustomTextbox2.Location = New System.Drawing.Point(187, 5)
+        Me.BunifuCustomTextbox2.Name = "BunifuCustomTextbox2"
+        Me.BunifuCustomTextbox2.Size = New System.Drawing.Size(214, 20)
+        Me.BunifuCustomTextbox2.TabIndex = 20
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Location = New System.Drawing.Point(0, 28)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.Size = New System.Drawing.Size(518, 302)
+        Me.DataGridView2.TabIndex = 17
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.BackColor = System.Drawing.Color.Transparent
+        Me.Label45.Font = New System.Drawing.Font("MS Reference Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.ForeColor = System.Drawing.Color.Black
+        Me.Label45.Location = New System.Drawing.Point(281, 16)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(19, 24)
+        Me.Label45.TabIndex = 18
+        Me.Label45.Text = ":"
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.BackColor = System.Drawing.Color.Transparent
+        Me.Label46.Font = New System.Drawing.Font("MS Reference Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.ForeColor = System.Drawing.Color.Black
+        Me.Label46.Location = New System.Drawing.Point(298, 19)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(198, 24)
+        Me.Label46.TabIndex = 19
+        Me.Label46.Text = "Subject Description"
+        '
         'MainMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(30, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(60, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(701, 425)
+        Me.Controls.Add(Me.BunifuGradientPanel3)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Label44)
         Me.Controls.Add(Me.Label31)
         Me.Controls.Add(Me.Label25)
         Me.Controls.Add(Me.Label30)
@@ -1154,7 +1453,6 @@ Partial Class MainMenu
         Me.Controls.Add(Me.BunifuGradientPanel1)
         Me.Controls.Add(Me.BunifuGradientPanel2)
         Me.Controls.Add(Me.PictureBox4)
-        Me.Controls.Add(Me.BunifuGradientPanel3)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "MainMenu"
@@ -1168,6 +1466,8 @@ Partial Class MainMenu
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BunifuGradientPanel3.ResumeLayout(False)
         Me.BunifuGradientPanel3.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ADDSTU.ResumeLayout(False)
         Me.StartBox.ResumeLayout(False)
         Me.Panel1.ResumeLayout(False)
@@ -1175,6 +1475,10 @@ Partial Class MainMenu
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1239,4 +1543,26 @@ Partial Class MainMenu
     Friend WithEvents ScanPC As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents ScanWeb As Bunifu.Framework.UI.BunifuFlatButton
     Friend WithEvents BunifuFlatButton8 As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label43 As Label
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Label38 As Label
+    Friend WithEvents Label37 As Label
+    Friend WithEvents Label36 As Label
+    Friend WithEvents Label35 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label32 As Label
+    Friend WithEvents View As Bunifu.Framework.UI.BunifuFlatButton
+    Friend WithEvents Label44 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents PictureBox6 As PictureBox
+    Friend WithEvents Label49 As Label
+    Friend WithEvents BunifuCustomTextbox2 As WindowsFormsControlLibrary1.BunifuCustomTextbox
+    Friend WithEvents DataGridView2 As DataGridView
+    Friend WithEvents Label46 As Label
+    Friend WithEvents Label45 As Label
 End Class

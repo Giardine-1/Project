@@ -4,6 +4,7 @@ Public Class MainMenu
     Dim connection As New MySqlConnection("datasource=localhost;port=3306;user=root;password=;database=admin")
     Dim reader As MySqlDataReader
 
+
     Public Property StringPass As String
     Public Property Username As String
 
@@ -15,7 +16,26 @@ Public Class MainMenu
         Dim adp As New MySqlDataAdapter(query, connection)
         adp.Fill(ds, "EMP")
         DataGridView1.DataSource = ds.Tables(0)
+
         connection.Close()
+    End Sub
+    Sub att()
+        Dim some As String = "SELECT * FROM records_attendance WHERE Date='" & Label44.Text & "' AND section_id='" & Label19.Text & "'"
+        Dim dA As New DataSet
+        Dim adp As New MySqlDataAdapter(some, connection)
+        adp.Fill(dA, "EMP")
+        DataGridView2.DataSource = dA.Tables(0)
+        connection.Close()
+    End Sub
+    Sub Desc()
+        Dim des As New MySqlCommand("SELECT * FROM section WHERE id='" & Label19.Text & "'", connection)
+        reader = Nothing
+        connection.Open()
+        reader = des.ExecuteReader
+        If reader.Read Then
+            Label46.Text = reader(2)
+            connection.Close()
+        End If
     End Sub
 
     Sub SecID()
@@ -109,12 +129,15 @@ Public Class MainMenu
         BunifuGradientPanel3.Visible = True
         Label10.Text = Label3.Text
         SecID()
+        Desc()
+
     End Sub
     Private Sub Label8_Click(sender As Object, e As EventArgs) Handles Label8.Click
         BunifuGradientPanel2.Width = 0
         BunifuGradientPanel3.Visible = True
         Label10.Text = Label3.Text
         SecID()
+        Desc()
     End Sub
 
     Private Sub Label6_Click(sender As Object, e As EventArgs) Handles Label6.Click
@@ -122,24 +145,28 @@ Public Class MainMenu
         BunifuGradientPanel3.Visible = True
         Label10.Text = Label6.Text
         SecID()
+        Desc()
     End Sub
     Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
         BunifuGradientPanel2.Width = 0
         BunifuGradientPanel3.Visible = True
         Label10.Text = Label11.Text
         SecID()
+        Desc()
     End Sub
     Private Sub Label26_Click(sender As Object, e As EventArgs) Handles Label26.Click
         BunifuGradientPanel2.Width = 0
         BunifuGradientPanel3.Visible = True
         Label10.Text = Label26.Text
         SecID()
+        Desc()
     End Sub
     Private Sub Label27_Click(sender As Object, e As EventArgs) Handles Label27.Click
         BunifuGradientPanel2.Width = 0
         BunifuGradientPanel3.Visible = True
         Label10.Text = Label27.Text
         SecID()
+        Desc()
     End Sub
 
     Private Sub Label28_Click(sender As Object, e As EventArgs) Handles Label28.Click
@@ -147,8 +174,10 @@ Public Class MainMenu
         BunifuGradientPanel3.Visible = True
         Label10.Text = Label28.Text
         SecID()
+        Desc()
     End Sub
     Private Sub StartAttendance_Click(sender As Object, e As EventArgs) Handles StartAttendance.Click
+        GroupBox1.Visible = False
         BunifuGradientPanel3.Width = 583
         StartBox.Height = 199
         ADDSTU.Width = 0
@@ -171,6 +200,7 @@ Public Class MainMenu
     End Sub
 
     Private Sub AddStudent_Click(sender As Object, e As EventArgs) Handles AddStudent.Click
+        GroupBox1.Visible = False
         BunifuGradientPanel3.Width = 583
         StartBox.Height = 0
         ADDSTU.Width = 254
@@ -196,6 +226,7 @@ Public Class MainMenu
 
     'ClassList
     Private Sub ClassList_Click(sender As Object, e As EventArgs) Handles ClassList.Click
+        GroupBox1.Visible = False
         Panel1.Visible = True
         BunifuGradientPanel3.Width = 0
         connection.Close()
@@ -393,5 +424,151 @@ Public Class MainMenu
         WebcamScan.Secid = Label19.Text
         Me.Hide()
         WebcamScan.Show()
+    End Sub
+
+    Private Sub View_Click(sender As Object, e As EventArgs) Handles View.Click
+        StartBox.Height = 0
+        ADDSTU.Width = 0
+        GroupBox1.Visible = True
+        Dim att As New MySqlCommand("SELECT * FROM `records_attendance` WHERE section_id=" & Label19.Text & "", connection)
+        reader = Nothing
+        connection.Open()
+        reader = att.ExecuteReader
+        Dim ary(12) As String
+        Dim array(14) As String
+        Dim cnt As Byte
+        cnt = 1
+        Dim cn As Byte
+        cn = 1
+        Dim c As Byte
+        c = 1
+        While reader.Read
+            ary(cnt) = reader(4)
+            Label32.Text = ary(1)
+            cn = cnt - 1
+            If Not ary(cn) = ary(cnt) Then
+                array(c) = ary(cnt)
+                c = c + 1
+            End If
+
+            Label33.Text = array(2)
+            Label34.Text = array(3)
+            Label35.Text = array(4)
+            Label36.Text = array(5)
+            Label37.Text = array(6)
+            Label38.Text = array(7)
+            Label39.Text = array(8)
+            Label40.Text = array(9)
+            Label41.Text = array(10)
+            Label42.Text = array(11)
+            Label43.Text = array(12)
+
+            cnt = cnt + 1
+        End While
+        connection.Close()
+
+
+    End Sub
+
+    Private Sub Label32_MouseHover(sender As Object, e As EventArgs) Handles Label32.MouseHover
+        Label32.ForeColor = Color.White
+    End Sub
+    Private Sub Label33_MouseHover(sender As Object, e As EventArgs) Handles Label33.MouseHover
+        Label33.ForeColor = Color.White
+    End Sub
+    Private Sub Label34_MouseHover(sender As Object, e As EventArgs) Handles Label34.MouseHover
+        Label34.ForeColor = Color.White
+    End Sub
+    Private Sub Label35_MouseHover(sender As Object, e As EventArgs) Handles Label35.MouseHover
+        Label35.ForeColor = Color.White
+    End Sub
+
+    Private Sub Label36_MouseHover(sender As Object, e As EventArgs) Handles Label36.MouseHover
+        Label36.ForeColor = Color.White
+    End Sub
+
+    Private Sub Label32_MouseLeave(sender As Object, e As EventArgs) Handles Label32.MouseLeave
+        Label32.ForeColor = Color.Black
+    End Sub
+    Private Sub Label33_MouseLeave(sender As Object, e As EventArgs) Handles Label3.MouseLeave
+        Label33.ForeColor = Color.Black
+    End Sub
+    Private Sub Label34_MouseLeave(sender As Object, e As EventArgs) Handles Label34.MouseLeave
+        Label34.ForeColor = Color.Black
+    End Sub
+    Private Sub Label35_MouseLeave(sender As Object, e As EventArgs) Handles Label35.MouseLeave
+        Label35.ForeColor = Color.Black
+    End Sub
+    Private Sub Label36_MouseLeave(sender As Object, e As EventArgs) Handles Label36.MouseLeave
+        Label36.ForeColor = Color.Black
+    End Sub
+
+    Private Sub Label33_Click(sender As Object, e As EventArgs) Handles Label33.Click
+        Label44.Text = Label33.Text
+        Panel2.Visible = True
+        SecID()
+        att()
+        BunifuGradientPanel3.Visible = False
+    End Sub
+
+    Private Sub Label36_Click(sender As Object, e As EventArgs) Handles Label36.Click
+        Label44.Text = Label36.Text
+        Panel2.Visible = True
+        SecID()
+        att()
+        BunifuGradientPanel3.Visible = False
+    End Sub
+
+    Private Sub Label35_Click(sender As Object, e As EventArgs) Handles Label35.Click
+        Label44.Text = Label35.Text
+        Panel2.Visible = True
+        SecID()
+        att()
+        BunifuGradientPanel3.Visible = False
+    End Sub
+
+    Private Sub Label34_Click(sender As Object, e As EventArgs) Handles Label34.Click
+        Label44.Text = Label34.Text
+        Panel2.Visible = True
+        SecID()
+        att()
+        BunifuGradientPanel3.Visible = False
+    End Sub
+
+    Private Sub Label37_Click(sender As Object, e As EventArgs) Handles Label37.Click
+        Label44.Text = Label37.Text
+        Panel2.Visible = True
+
+        SecID()
+        att()
+        BunifuGradientPanel3.Visible = False
+    End Sub
+
+    Private Sub Label32_Click(sender As Object, e As EventArgs) Handles Label32.Click
+        Label44.Text = Label32.Text
+        Panel2.Visible = True
+        SecID()
+        att()
+        BunifuGradientPanel3.Visible = False
+    End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click
+        Panel2.Visible = False
+        BunifuGradientPanel3.Visible = True
+    End Sub
+
+    Private Sub BunifuCustomTextbox2_TextChanged(sender As Object, e As EventArgs) Handles BunifuCustomTextbox2.TextChanged
+        Dim Adapter As New MySqlDataAdapter
+        Dim ds As New DataSet
+        Try
+            connection.Open()
+            Adapter = New MySqlDataAdapter("SELECT * FROM records_attendance WHERE Date='" & Label44.Text & "' AND section_id='" & Label19.Text & "'AND `student number` like '%" & BunifuCustomTextbox2.Text & "%'", connection)
+            Adapter.Fill(ds)
+            DataGridView2.DataSource = ds.Tables(0)
+            connection.Close()
+
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class
